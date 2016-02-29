@@ -20,16 +20,6 @@ public class ContactForm extends FormLayout {
 
     Button save = new Button("Save", this::save);
     Button cancel = new Button("Cancel", this::cancel);
-//    Button save = new Button("Save", new Button.ClickListener() {
-//        @Override public void buttonClick(Button.ClickEvent event) {
-//            save(event);
-//        }
-//    });
-//    Button cancel = new Button("Cancel", new Button.ClickListener() {
-//        @Override public void buttonClick(Button.ClickEvent event) {
-//            cancel(event);
-//        }
-//    });
     TextField firstName = new TextField("First name");
     TextField lastName = new TextField("Last name");
     TextField phone = new TextField("Phone");

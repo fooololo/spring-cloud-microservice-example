@@ -39,7 +39,7 @@ public class SampleHystrixApp {
 }
 class Service {
 
-	@HystrixCommand
+	@HystrixCommand()
 	public String hello() {
 		return "Hello";
 	}

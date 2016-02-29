@@ -64,30 +64,14 @@ public class AddressbookUI extends UI {
          */
         newContact.addClickListener(e -> contactForm.edit(new User()));
 
-//        newContact.addClickListener(new Button.ClickListener() {
-//            @Override public void buttonClick(Button.ClickEvent event) {
-//                contactForm.edit(new User());
-//            }
-//        });
         filter.setInputPrompt("Filter contacts...");
         filter.addTextChangeListener(e -> refreshContacts(e.getText()));
-
-//        filter.addTextChangeListener(new FieldEvents.TextChangeListener() {
-//            @Override public void textChange(FieldEvents.TextChangeEvent event) {
-//                refreshContacts(event.getText());
-//            }
-//        });
         contactList.setContainerDataSource(new BeanItemContainer<>(User.class));
         contactList.setColumnOrder("id", "firstName", "lastName", "email");
         contactList.removeColumn("birthDate");
         contactList.setSelectionMode(Grid.SelectionMode.SINGLE);
         contactList.addSelectionListener(e
                 -> contactForm.edit((User) contactList.getSelectedRow()));
-//        contactList.addSelectionListener(new SelectionEvent.SelectionListener() {
-//            @Override public void select(SelectionEvent event) {
-//                contactForm.edit((User)contactList.getSelectedRow());
-//            }
-//        });
         refreshContacts();
     }
 
